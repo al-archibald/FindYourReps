@@ -25,7 +25,7 @@ export default {
     async submitSearch() {
       try {
         const response = await axios.get(
-          "localhost:9000/searchName?query=?&page=0&size=5&sort=name&direction=asc",
+          "/searchName?query=?&page=0&size=5&sort=name&direction=asc",
           {
             params: {
               query: this.searchQuery,
