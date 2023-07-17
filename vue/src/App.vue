@@ -1,22 +1,16 @@
 <template>
   <div id="app">
 
-      <!-- ======= Header ======= -->
+<!-- ======= Header ======= -->
   <header class="header" id="myHeader">
     <div class="container">
-      <div id="left-btn">
-      <router-link  v-bind:to="{ name: 'home' }">
-        <a class="home-btn" >Home</a>
-      </router-link>
-      </div>
-
       <div id="right-btn">
       <router-link v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">
         <a class="home-btn" >Logout</a>
       </router-link>
       </div>
     </div>
-  </header><!-- End Header -->
+  </header>
     <div id="main">
       <router-view id="main_view"/>
     </div>
@@ -117,6 +111,7 @@ header {
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: right;
 }
 
 #left-btn{
@@ -218,8 +213,8 @@ header {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
   font-style: bold;
-  margin-bottom: 10;
-  font-size: 55px;
+  margin-bottom: 0;
+  font-size: 150px;
   line-height: 56px;
   color: #eae8e8;
   font-display:auto;
@@ -232,10 +227,10 @@ header {
   font-style: normal;
   font-display:auto;
   font-stretch:normal;
-  text-transform: uppercase;
   color: #e37d43;
   margin-bottom: 10px 0 0 0;
-  font-size: 30px;
+  font-size: 20px;
+  text-align: center;
 }
 
 #main h3 {

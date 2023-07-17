@@ -1,5 +1,10 @@
 # Capstone Starter Project
 
+>Tech Elevator's Final Capstone Starter Code
+> 
+>Written by Tech Elevator's curriculum team for the final capstone.
+
+
 ## Database
 
 Inside the `<project-root>/database/` directory, you'll find an executable Bash script (`.sh` file) and several SQL scripts (`.sql` files). These can be used to build and rebuild a PostgreSQL database for the capstone project.

@@ -6,7 +6,7 @@ INSERT INTO users (username,password_hash,role) VALUES ('user3','user3','ROLE_US
 
 
 INSERT INTO reps (name, phone, party, email) VALUES
-  ('Richard Shelby', '202-224-5744', 'Republican', 'senator@shelby.senate.gov'),
+('Richard Shelby', '202-224-5744', 'Republican', 'senator@shelby.senate.gov'),
   ('Tommy Tuberville', '202-224-4124', 'Republican', 'senator@tuberville.senate.gov'),
   ('Lisa Murkowski', '202-224-6665', 'Republican', 'senator@murkowski.senate.gov'),
   ('Dan Sullivan', '202-224-3004', 'Republican', 'senator@sullivan.senate.gov'),
@@ -27,6 +27,18 @@ INSERT INTO reps (name, phone, party, email) VALUES
   ('Tammy Duckworth', '202-224-2854', 'Democrat', 'senator@duckworth.senate.gov'),
   ('Dick Durbin', '202-224-2152', 'Democrat', 'senator@durbin.senate.gov'),
   ('Todd Young', '202-224-5623', 'Republican', 'senator@young.senate.gov'),
-  ('Mike Braun', '202-224-4814', 'Republican', 'senator@braun.senate.gov');
+  ('Mike Braun', '202-224-4814', 'Republican', 'senator@braun.senate.gov'),
+  ('Chuck Schumer', '202-224-6542', 'Democrat', 'senator@schumer.senate.gov'),
+  ('Kirsten Gillibrand', '202-224-4451', 'Democrat', 'senator@gillibrand.senate.gov'),
+  ('Mitch McConnell', '202-224-2541', 'Republican', 'senator@mcconnell.senate.gov'),
+  ('Rand Paul', '202-224-4343', 'Republican', 'senator@paul.senate.gov'),
+  ('Dianne Feinstein', '202-224-3841', 'Democrat', 'senator@feinstein.senate.gov'),
+  ('Alex Padilla', '202-224-3553', 'Democrat', 'senator@padilla.senate.gov'),
+  ('Michael Bennet', '202-224-5852', 'Democrat', 'senator@bennet.senate.gov'),
+  ('John Hickenlooper', '202-224-5941', 'Democrat', 'senator@hickenlooper.senate.gov'),
+  ('Richard Burr', '202-224-3154', 'Republican', 'senator@burr.senate.gov'),
+  ('Thom Tillis', '202-224-6342', 'Republican', 'senator@tillis.senate.gov'),
+  ('Jeff Merkley', '202-224-3753', 'Democrat', 'senator@merkley.senate.gov'),
+  ('Ron Wyden', '202-224-5244', 'Democrat', 'senator@wyden.senate.gov');
 
   COMMIT TRANSACTION;
