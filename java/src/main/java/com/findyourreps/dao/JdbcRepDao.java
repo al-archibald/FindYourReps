@@ -32,13 +32,13 @@ public class JdbcRepDao implements RepDao {
     }
 
     @Override // search and display reps based on search query
-    public List<Representative> searchName(String searchQuery) {
+    public List<Representative> searchName(String searchQuery, int size, int page, String direction, String sort) {
         List<Representative> reps = new ArrayList<>();
         String sql = "SELECT * FROM reps WHERE TRIM(name) ILIKE ?";
             // TRIM removes leading and trailing spaces; ILIKE makes search case-insensitive
         String searchParam = "%" + searchQuery + "%";
 
-        sql += " Order BY name ASC LIMIT 5";
+        sql += " Order BY " + sort + " " + direction + " LIMIT " + size + " OFFSET " + (page*size);
             // sort by name in ascending order and limit to 5 results
 
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, searchParam);

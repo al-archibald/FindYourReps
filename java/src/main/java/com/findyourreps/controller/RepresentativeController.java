@@ -22,8 +22,12 @@ public class RepresentativeController {
     }
 
     @RequestMapping(value = "/searchName", method = RequestMethod.GET)
-    public List<Representative> searchName(@RequestParam("query") String searchQuery) {
-        List<Representative> repList = repDao.searchName(searchQuery);
+    public List<Representative> searchName (@RequestParam("query") String searchQuery,
+                                            @RequestParam("size") int size,
+                                            @RequestParam("page") int page,
+                                            @RequestParam("direction") String direction,
+                                            @RequestParam("sort") String sort) {
+        List<Representative> repList = repDao.searchName(searchQuery, size, page, direction, sort);
         return repList;
     }
 

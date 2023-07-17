@@ -8,7 +8,7 @@ public interface RepDao {
 
     List<Representative> findAll();
 
-    List<Representative> searchName(String searchQuery);
+    List<Representative> searchName(String searchQuery, int size, int page, String direction, String sort);
 
     List<Representative> searchParty(String searchQuery);
 }

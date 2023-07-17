@@ -10,65 +10,68 @@
         </tr>
       </thead>
       <tbody>
-      <tr class="results" v-for="result in displayedResults" :key="result.id">
-        <td>{{ result.name }}</td>
-        <td>{{ result.phone }}</td>
-        <td>{{ result.party }}</td>
-        <td>{{ result.email }}</td>
-      </tr>
+        <tr class="info" v-for="result in displayedResults" :key="result.id">
+          <td class="results">{{ result.name }}</td>
+          <td class="results">{{ result.phone }}</td>
+          <td class="results">{{ result.party }}</td>
+          <td class="results">{{ result.email }}</td>
+        </tr>
       </tbody>
     </table>
     <div class="pagination">
-        <button @click="previousPage" :disabled="currentPage === 1">Previous</button>
-        <button @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+      <button @click="previousPage" :disabled="currentPage === 1">
+        Previous
+      </button>
+      <button @click="nextPage" :disabled="currentPage === totalPages">
+        Next
+      </button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-    props: {
-        results: {
-            type: Array,
-            required: true,
-        },
-        pageSize: {
-            type: Number,
-            default: 5,
-        },
+  props: {
+    results: {
+      type: Array,
+      required: true,
     },
-    data() {
-        return {
-            currentPage: 1,
-        };
+    pageSize: {
+      type: Number,
+      default: 5,
     },
-    computed: {
-        totalPages() {
-            return Math.ceil(this.results.length / this.pageSize);
-        },
+  },
+  data() {
+    return {
+      currentPage: 1,
+    };
+  },
+  computed: {
+    totalPages() {
+      return Math.ceil(this.results.length / this.pageSize);
+    },
     displayedResults() {
-        const startIndex = (this.currentPage - 1) * this.pageSize;
-        const endIndex = startIndex + this.pageSize;
-        return this.results.slice(startIndex, endIndex);
+      const startIndex = (this.currentPage - 1) * this.pageSize;
+      const endIndex = startIndex + this.pageSize;
+      return this.results.slice(startIndex, endIndex);
     },
+  },
+  methods: {
+    previousPage() {
+      if (this.currentPage > 1) {
+        this.currentPage--;
+      }
     },
-    methods: {
-        previousPage() {
-            if (this.currentPage > 1) {
-                this.currentPage--;
-            }
-        },
-        nextPage() {
-            if (this.currentPage < this.totalPages) {
-                this.currentPage++;
-            }
-        },
+    nextPage() {
+      if (this.currentPage < this.totalPages) {
+        this.currentPage++;
+      }
     },
+  },
 };
 </script>
 
 <style scoped>
-
 .rep_table {
   align-items: center;
   text-align: left;
@@ -95,23 +98,25 @@ export default {
   background: rgba(255, 17, 0, 0.308);
   border-color: #000000;
   border: 1px solid;
-  padding: 6px;
+  padding: 8px;
 }
 
 .results {
   text-align: left;
-  color: aqua;
-  background: #ee0505;
+  color: rgb(2, 2, 2);
+  background: #ffffff;
+  border: 1px solid;
+  padding: 10px;
+  font-size: 12px;
 }
 
-/* tr:hover {
-  background-color: #64aa71a2;
-} */
+.results:hover {
+  background-color: #cacaca96;
+}
 
 .pagination {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
-
 </style>

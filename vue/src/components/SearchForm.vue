@@ -25,7 +25,7 @@ export default {
     async submitSearch() {
       try {
         const response = await axios.get(
-          "/searchName?query=?&page=0&size=5&sort=name&direction=asc",
+          "/searchName",
           {
             params: {
               query: this.searchQuery,
@@ -44,9 +44,6 @@ export default {
   },
 };
 </script>
-
-
-
 
 <style scoped>
 div.search-input {
