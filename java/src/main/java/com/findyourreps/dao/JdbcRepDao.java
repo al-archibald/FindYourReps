@@ -49,22 +49,22 @@ public class JdbcRepDao implements RepDao {
         return reps;
     }
 
-//    @Override
-//    public List<Representative> searchParty(String searchQuery) {
-//        List<Representative> reps = new ArrayList<>();
-//        String sql = "SELECT name, phone, email FROM reps WHERE TRIM(party) ILIKE ?";
-//        String searchParam = "%" + searchQuery + "%";
-//
-//        sql += " Order BY name ASC LIMIT 5";
-//        // sort by name in ascending order and limit to 5 results
-//
-//        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, searchParam);
-//        while (results.next()) {
-//            Representative representative = mapRowToRepresentative(results);
-//            reps.add(representative);
-//        }
-//        return reps;
-//    }
+    @Override
+    public List<Representative> searchParty(String searchQuery) {
+        List<Representative> reps = new ArrayList<>();
+        String sql = "SELECT * FROM reps WHERE TRIM(party) ILIKE ?";
+        String searchParam = "%" + searchQuery + "%";
+
+        sql += " Order BY name ASC LIMIT 5";
+        // sort by name in ascending order and limit to 5 results
+
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, searchParam);
+        while (results.next()) {
+            Representative representative = mapRowToRepresentative(results);
+            reps.add(representative);
+        }
+        return reps;
+    }
 
     private Representative mapRowToRepresentative(SqlRowSet rs) {
         Representative representative = new Representative();

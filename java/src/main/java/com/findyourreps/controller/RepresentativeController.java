@@ -2,7 +2,6 @@ package com.findyourreps.controller;
 
 import com.findyourreps.dao.RepDao;
 import com.findyourreps.model.Representative;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,10 +27,10 @@ public class RepresentativeController {
         return repList;
     }
 
-//    @RequestMapping(value = "/searchParty", method = RequestMethod.GET)
-//    public List<Representative> searchParty(@RequestParam("query") String searchQuery) {
-//        List<Representative> repList = repDao.searchParty(searchQuery);
-//        return repList;
-//    }
+    @RequestMapping(value = "/searchParty", method = RequestMethod.GET)
+    public List<Representative> searchParty(@RequestParam("query") String searchQuery) {
+        List<Representative> repList = repDao.searchParty(searchQuery);
+        return repList;
+    }
 
 }

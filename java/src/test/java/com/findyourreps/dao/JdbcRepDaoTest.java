@@ -46,14 +46,14 @@ public class JdbcRepDaoTest extends BaseDaoTests {
         Assert.assertTrue(isChrisCoonsFound);
     }
 
-//    @Test
-//    public void searchDReturnsAllDemocratsCaseInsensitive() {
-//        List<Representative> reps = sut.searchParty("d");
-//
-//        Assert.assertNotNull(reps);
-//        boolean areDemsFound = reps.stream().anyMatch(rep ->
-//                rep.getParty().equalsIgnoreCase("Democrat"));
-//        Assert.assertTrue(areDemsFound);
-//    }
+    @Test
+    public void searchDReturnsAllDemocratsCaseInsensitive() {
+        List<Representative> reps = sut.searchParty("d");
+
+        Assert.assertNotNull(reps);
+        boolean areDemsFound = reps.stream().anyMatch(rep ->
+                rep.getParty().equalsIgnoreCase("Democrat"));
+        Assert.assertTrue(areDemsFound);
+    }
 
 }

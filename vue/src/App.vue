@@ -6,7 +6,7 @@
     <div class="container">
       <div id="right-btn">
       <router-link v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">
-        <a class="home-btn" >Logout</a>
+        <a class="home-btn">Logout</a>
       </router-link>
       </div>
     </div>
@@ -14,7 +14,8 @@
     <div id="main">
       <router-view id="main_view"/>
     </div>
-  </div>
+    
+</div>
 </template>
 
 <script>
@@ -35,9 +36,11 @@ data() {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   background-size: cover;
   background-repeat: no-repeat;
@@ -46,12 +49,12 @@ body {
 }
 
 a {
-  color: #fff;
+  color: #b40505;
   text-decoration: none;
 }
 
 a:hover {
-  color: #bc7f37;
+  color: #070707;
   text-decoration: none;
 }
 
@@ -64,37 +67,17 @@ h6 {
   font-family: 'Bebas Neue', sans-serif;
 }
 
-/* General Button Style */
-.btn2 {
-  font-family: "mencken-std", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FF415B;
-  margin: 0 0 0 15px;
-  border: 2px solid #64AA71;
-  border-radius: 50px;
-  padding: 8px 25px;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 1px;
-  transition: 0.3s;
-}
-
-.btn2:hover {
-  color: #e37d43;
-}
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 
-header {
-  background: #000000;
+.header {
+  background: #080808;
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
-  top: 40px;
-  width: 100vw;
+  /* padding: 25px 0; */
+  /* top: 20px; */
+  width: 100%;
   margin: 0;
   padding: 0;
   position: fixed;
@@ -102,8 +85,8 @@ header {
   transition: 0.2s; 
 }
 
-.header .container {
-  margin: 0;
+.container {
+  margin: 0px;
   padding: 0;
   line-height: 1;
   font-weight: 300;
@@ -114,19 +97,10 @@ header {
   justify-content: right;
 }
 
-#left-btn{
-  display: flex;
-  justify-content: left;
-  align-items: flex-end;
-  width: 33%;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  margin-left: 30px;
-}
-
 #right-btn{
-  margin-bottom: 30px;
-  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
   display: flex;
   justify-content: right;
   align-items: flex-end;
@@ -139,16 +113,8 @@ header {
   border-bottom: 1px solid #37332a;
 }
 
-.logo {
-  max-height: 75px;
-  display: flex;
-  justify-content: center;
-  width: 33%;
-}
-
-.header .container .logo img {
+.header .container {
   max-height: 100px;
-  /* margin-left: 40px; */
 }
 
 
@@ -161,7 +127,7 @@ header {
   font-weight: 500;
   font-style: normal;
   margin-top: 20px;
-  border: 2px solid #bc7f37;
+  border: 2px solid #ffffff;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px;
@@ -173,7 +139,7 @@ header {
 
 .home-btn:hover {
   background: white; 
-  color: rgb(53, 53, 53);
+  color: rgb(241, 7, 7);
 }
 
 @media (max-width: 992px) {
@@ -188,10 +154,10 @@ header {
 --------------------------------------------------------------*/
 #main {
   width: 100%; 
-  height: 600vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.719);
+  background: rgb(255, 255, 255);
 }
 
 #main:before {
@@ -216,7 +182,7 @@ header {
   margin-bottom: 0;
   font-size: 150px;
   line-height: 56px;
-  color: #eae8e8;
+  color: #b40a0a;
   font-display:auto;
   font-stretch:normal;
 }
@@ -227,7 +193,7 @@ header {
   font-style: normal;
   font-display:auto;
   font-stretch:normal;
-  color: #e37d43;
+  color: #c00909;
   margin-bottom: 10px 0 0 0;
   font-size: 20px;
   text-align: center;

@@ -1,8 +1,7 @@
 <template>
-<div class="main_view">
-
+  <div class="main_view">
     <div class="main_view_item">
-        <h1>Find Your Reps</h1>
+      <h1>Find Your Reps</h1>
     </div>
 
     <div class="subhead">
@@ -11,23 +10,35 @@
       <h2>phone numbers, political parties, and email addresses.</h2>
     </div>
 
-
-<!-- None of this is correct -->
-    <div class="main_view_item">
-      <router-link v-bind:to="{ name: 'SearchBox.vue' }">
-        <a class="btn2">Search</a>
-      </router-link>
+    <div class="search-form">
+      <SearchForm @search-results="handleSearchResults" />
     </div>
 
-    <div class="main_view_item">
-      <search-box-component/>
+    <div class="search-results">
+      <SearchResults :results="SearchResults" />
     </div>
 
   </div>
-
 </template>
 
 <script>
+import SearchForm from "../components/SearchForm.vue";
+import SearchResults from "../components/SearchResults.vue";
 
-
+export default {
+  components: {
+    SearchForm,
+    SearchResults,
+  },
+  data() {
+    return {
+      SearchResults: [],
+    };
+  },
+  methods: {
+    handleSearchResults(results) {
+      this.SearchResults = results;
+    },
+  },
+};
 </script>
