@@ -180,7 +180,7 @@ h6 {
   font-weight: 400;
   font-style: bold;
   margin-bottom: 0;
-  font-size: 150px;
+  font-size: 100px;
   line-height: 56px;
   color: #b40a0a;
   font-display:auto;

@@ -71,8 +71,10 @@ export default {
 .form-input-group {
   margin-bottom: 1rem;
   color: red;
-
+  display: flex;
+  justify-content: center;
 }
+
 label {
   margin-right: 0.5rem;
 }

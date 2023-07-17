@@ -42,3 +42,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+.subhead {
+padding-left: 30px;
+}
+
+</style>

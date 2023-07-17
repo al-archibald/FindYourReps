@@ -92,7 +92,9 @@ export default {
   width: 800px;
   display: flex;
   justify-content: space-between;
+  font-family: "mencken-std", sans-serif;
 }
+
 label {
   margin-right: 0.5rem;
 }
@@ -116,21 +118,21 @@ textarea {
   font-family: "mencken-std", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FF415B;
+  color: #030303;
   margin: 0 0 0 15px;
-  border: 2px solid #64AA71;
+  border: 2px solid #030303;
   border-radius: 50px;
   padding: 8px 25px;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 1px;
   transition: 0.3s;
-  background: #EAE8E8;
+  background: #fc020265;
 }
 
 .btn2:hover {
-  background: #64AA71; 
-  color: #EAE8E8;
+  background: #fcfcfc; 
+  color: #fc0202;
 }
 
 div {
@@ -138,7 +140,6 @@ div {
 }
 
 div .registration-form {
-    background: rgba(8, 8, 8, 0.39);
     align-items: center;
     justify-items: center;
     justify-content: center;
