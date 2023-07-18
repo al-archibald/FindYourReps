@@ -30,7 +30,7 @@ public class JdbcRepDao implements RepDao {
         return reps;
     }
 
-    @Override // search and display reps based on search query of name
+    @Override // search and display reps based on search query of column "name"
     public List<Representative> searchName(String searchQuery, int size, int page, String direction, String sort) {
         List<Representative> reps = new ArrayList<>();
         String sql = "SELECT * FROM reps WHERE TRIM(name) ILIKE ?";
@@ -47,7 +47,7 @@ public class JdbcRepDao implements RepDao {
         return reps;
     }
 
-    @Override // search and display reps based on search query of party
+    @Override // search and display reps based on search query of column "party"
     public List<Representative> searchParty(String searchQuery, int size, int page, String direction, String sort) {
         List<Representative> reps = new ArrayList<>();
         String sql = "SELECT * FROM reps WHERE TRIM(party) ILIKE ?";

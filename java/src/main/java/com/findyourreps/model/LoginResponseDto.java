@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
     pass to the server for a login endpoint, and TokenDto represents the object that's returned from the server
     to the client from a login endpoint.
  */
+
 public class LoginResponseDto {
 
     private String token;

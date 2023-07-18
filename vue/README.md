@@ -1,5 +1,10 @@
 # Final Vue Capstone Project Seed
+
+>Tech Elevator's Final Capstone Starter Code
+> 
+>Written by Tech Elevator's curriculum team for the final capstone.
 ​
+
 This is the Vue starter project for the final capstone. This document walks you through how to set up and run the project. It also explains the project's features, such as Vue Router, Vuex, and authentication.
 ​
 ## Project setup

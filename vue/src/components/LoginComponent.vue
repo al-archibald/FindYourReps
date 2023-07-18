@@ -119,9 +119,14 @@ label {
 }
 
 div .login{
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding-top: 60px;
+}
+
+div #invalid {
+  padding-bottom: 30px;
+  padding-left: 50px;
 }
 
 .alert{
