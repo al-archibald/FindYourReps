@@ -59,6 +59,11 @@ export default {
   },
   
   methods: {
+
+  // Buttons are displayed but not functional --
+  // Will need to increment current page for nextPage and then load that page
+  // Will need to decrement current page for previousPage and then load that page
+
     previousPage() {
       if (this.currentPage > 1) {
         this.currentPage--;

@@ -6,7 +6,7 @@
       <div role="alert" v-if="invalidCredentials" id="invalid">
         Invalid username and password, please try again.
       </div>
-      <div role="alert" v-if="this.$route.query.registration">
+      <div role="alert" v-if="this.$route.query.registration" id="registered">
         Thank you for registering, please sign in.
       </div>
       <div class="form-input-group">
@@ -127,6 +127,11 @@ div .login{
 div #invalid {
   padding-bottom: 30px;
   padding-left: 50px;
+}
+
+div #registered {
+    padding-bottom: 30px;
+    padding-left: 70px;
 }
 
 .alert{

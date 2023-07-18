@@ -29,7 +29,7 @@ export default {
     async submitSearch() {
       // ensure searchQuery is entered with valid characters
       if (!this.isValidSearchQuery(this.searchQuery)) {
-        this.errorMessage = "Invalid search. Please enter letters.";
+        this.errorMessage = "Invalid search! Please enter letters.";
         return;
       }
 
@@ -65,9 +65,9 @@ export default {
 <style scoped>
 
 .error-message {
-  padding-top: 15px;
+  padding-top: 10px;
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: rgb(211, 0, 0);
   margin-top: 5px;
   font-size: 14px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
