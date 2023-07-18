@@ -18,6 +18,7 @@
         </tr>
       </tbody>
     </table>
+
     <div class="pagination">
       <button @click="previousPage" :disabled="currentPage === 1">
         Previous
@@ -56,6 +57,7 @@ export default {
       return this.results.slice(startIndex, endIndex);
     },
   },
+  
   methods: {
     previousPage() {
       if (this.currentPage > 1) {

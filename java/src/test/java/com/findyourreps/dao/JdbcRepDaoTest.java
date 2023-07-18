@@ -18,6 +18,8 @@ public class JdbcRepDaoTest extends BaseDaoTests {
         sut = new JdbcRepDao(jdbcTemplate);
     }
 
+    //Testing findAll method
+
     @Test
     public void findAll() {
         List<Representative> reps = sut.findAll();
@@ -26,9 +28,12 @@ public class JdbcRepDaoTest extends BaseDaoTests {
         Assert.assertEquals(34, reps.size());
     }
 
+
+    // Testing searchName method
+
     @Test
     public void searchTommyReturnsTommyTubervilleCaseInsensitive() {
-        List<Representative> reps = sut.searchName("tommy");
+        List<Representative> reps = sut.searchName("tommy", 5, 0, "asc", "name");
 
         Assert.assertNotNull(reps);
         boolean isTommyTubervilleFound = reps.stream().anyMatch(rep ->
@@ -38,7 +43,7 @@ public class JdbcRepDaoTest extends BaseDaoTests {
 
     @Test
     public void searchOOReturnsChrisCoonsCaseInsensitive() {
-        List<Representative> reps = sut.searchName("OO");
+        List<Representative> reps = sut.searchName("OO", 5, 0, "asc", "name");
 
         Assert.assertNotNull(reps);
         boolean isChrisCoonsFound = reps.stream().anyMatch(rep ->
@@ -46,13 +51,26 @@ public class JdbcRepDaoTest extends BaseDaoTests {
         Assert.assertTrue(isChrisCoonsFound);
     }
 
+
+    // Testing searchParty method
+
     @Test
     public void searchDReturnsAllDemocratsCaseInsensitive() {
-        List<Representative> reps = sut.searchParty("d");
+        List<Representative> reps = sut.searchParty("d", 5, 0, "asc", "party");
 
         Assert.assertNotNull(reps);
         boolean areDemsFound = reps.stream().anyMatch(rep ->
                 rep.getParty().equalsIgnoreCase("Democrat"));
+        Assert.assertTrue(areDemsFound);
+    }
+
+    @Test
+    public void searchRepReturnsAllRepublicansCaseInsensitiveDesc() {
+        List<Representative> reps = sut.searchParty("rep", 5, 0, "desc", "party");
+
+        Assert.assertNotNull(reps);
+        boolean areDemsFound = reps.stream().anyMatch(rep ->
+                rep.getParty().equalsIgnoreCase("Republican"));
         Assert.assertTrue(areDemsFound);
     }
 

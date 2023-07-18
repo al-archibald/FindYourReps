@@ -10,5 +10,5 @@ public interface RepDao {
 
     List<Representative> searchName(String searchQuery, int size, int page, String direction, String sort);
 
-    List<Representative> searchParty(String searchQuery);
+    List<Representative> searchParty(String searchQuery, int size, int page, String direction, String sort);
 }

@@ -32,8 +32,12 @@ public class RepresentativeController {
     }
 
     @RequestMapping(value = "/searchParty", method = RequestMethod.GET)
-    public List<Representative> searchParty(@RequestParam("query") String searchQuery) {
-        List<Representative> repList = repDao.searchParty(searchQuery);
+    public List<Representative> searchParty(@RequestParam("query") String searchQuery,
+                                            @RequestParam("size") int size,
+                                            @RequestParam("page") int page,
+                                            @RequestParam("direction") String direction,
+                                            @RequestParam("sort") String sort) {
+        List<Representative> repList = repDao.searchParty(searchQuery, size, page, direction, sort);
         return repList;
     }
 
